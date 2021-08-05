@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+$Transparent-white: hsla(0, 0%, 100%, 0.75); // paragraphs
+$Very-light-gray: hsl(0, 0%, 95%); // (background, headings, buttons)
+
+$font-size: 15px;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Lexend Deca", sans-serif;
+	font-size: $font-size;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $Very-light-gray;
+}
+
+.container {
+	display: flex;
+	max-width: 64%;
+	background: $Bright-orange;
+	border-radius: 10px;
+
+	.card {
+		padding: 1.8rem;
+		color: $Transparent-white;
+
+		.title {
+			font-family: "Big Shoulders Display";
+			font-weight: 700;
+			color: $Very-light-gray;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+			margin: 1.5rem 0;
+		}
+
+		.info {
+			line-height: 2;
+			font-weight: 400;
+		}
+
+		button {
+			font-family: inherit;
+			font-weight: 400;
+			border: 2px solid $Very-light-gray;
+			border-radius: 50px;
+			background: $Very-light-gray;
+			padding: .8rem 2.5rem;
+			margin-top: 4rem;
+		}
+
+		button:active,
+		button:hover {
+			background: none;
+			color: $Very-light-gray;
+		}
+	}
+
+	.card-1 {
+		background: $Bright-orange;
+		border-radius: 10px 0 0 10px;
+
+		button {
+			color: $Bright-orange;
+		}
+	}
+	.card-2 {
+		background: $Dark-cyan;
+
+		button {
+			color: $Dark-cyan;
+		}
+	}
+	.card-3 {
+		background: $Very-dark-cyan;
+		border-radius: 0 10px 10px 0;
+
+		button {
+			color: $Very-dark-cyan;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	body {
+		height: unset;
+		padding: 5rem 0;
+	}
+	.container {
+		flex-direction: column;
+		max-width: 90%;
+
+		.card {
+			padding: 3.5rem;
+
+			.info {
+				line-height: 2.8;
+			}
+
+			button {
+				margin-top: 2rem;
+			}
+		}
+		.card-1 {
+			border-radius: 10px 10px 0 0;
+		}
+		.card-3 {
+			border-radius: 0 0 10px 10px;
+		}
+	}
+}

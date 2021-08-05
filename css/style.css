@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f2f2f2;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 64%;
+  background: #e38826;
+  border-radius: 10px;
+}
+
+.container .card {
+  padding: 1.8rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.container .card .title {
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+}
+
+.container .card .info {
+  line-height: 2;
+  font-weight: 400;
+}
+
+.container .card button {
+  font-family: inherit;
+  font-weight: 400;
+  border: 2px solid #f2f2f2;
+  border-radius: 50px;
+  background: #f2f2f2;
+  padding: .8rem 2.5rem;
+  margin-top: 4rem;
+}
+
+.container .card button:active,
+.container .card button:hover {
+  background: none;
+  color: #f2f2f2;
+}
+
+.container .card-1 {
+  background: #e38826;
+  border-radius: 10px 0 0 10px;
+}
+
+.container .card-1 button {
+  color: #e38826;
+}
+
+.container .card-2 {
+  background: #006970;
+}
+
+.container .card-2 button {
+  color: #006970;
+}
+
+.container .card-3 {
+  background: #004241;
+  border-radius: 0 10px 10px 0;
+}
+
+.container .card-3 button {
+  color: #004241;
+}
+
+@media (max-width: 900px) {
+  body {
+    height: unset;
+    padding: 5rem 0;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 90%;
+  }
+  .container .card {
+    padding: 3.5rem;
+  }
+  .container .card .info {
+    line-height: 2.8;
+  }
+  .container .card button {
+    margin-top: 2rem;
+  }
+  .container .card-1 {
+    border-radius: 10px 10px 0 0;
+  }
+  .container .card-3 {
+    border-radius: 0 0 10px 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
